@@ -11,6 +11,9 @@
     "start": "fedx-scripts webpack-dev-server --progress",
     "test": "fedx-scripts jest --coverage"
   },
+  "files": [
+    "/dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openedx/frontend-component-ai-translations.git"
@@ -33,18 +36,19 @@
     "@testing-library/dom": "9.3.3",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "10.4.9",
+    "@testing-library/user-event": "^14.5.1",
     "@wojtekmaj/enzyme-adapter-react-17": "0.8.0",
     "enzyme": "3.11.0",
     "husky": "8.0.3",
     "jest": "29.7.0",
-    "jest-chain": "1.1.6",
-    "prop-types": "15.8.1"
+    "jest-chain": "1.1.6"
   },
   "dependencies": {
     "@edx/frontend-platform": "6.0.1",
     "@edx/paragon": "21.5.3",
     "@reduxjs/toolkit": "^1.9.7",
     "babel-polyfill": "6.26.0",
+    "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "7.2.9",
