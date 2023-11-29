@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Frontend component for ai translations",
   "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "make build",
     "i18n_extract": "BABEL_ENV=i18n fedx-scripts babel src --quiet > /dev/null",
