@@ -43,7 +43,7 @@ const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
             data-testid="app-entry-btn"
             onClick={handleViewClick}
           >
-            <div className=" d-flex flex-column justify-content-center">
+            <div className="d-flex flex-column justify-content-center">
               <XpertLogo />
               Get free translations
               <Image
