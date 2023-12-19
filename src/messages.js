@@ -8,7 +8,7 @@ const messages = defineMessages({
   },
   translationsNotAvailable: {
     id: 'ai-translations.request.heading.bottom',
-    defaultMessage: 'Translations is not available',
+    defaultMessage: 'Translations service is not available',
     description: 'Translations heading not available',
   },
   backButtonAlt: {
