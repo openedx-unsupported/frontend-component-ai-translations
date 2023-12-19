@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { FormattedMessage, useIntl } from '@edx/frontend-platform/i18n';
 import {
   ActionRow, Collapsible, Icon, IconButton, Image,
 } from '@edx/paragon';
 import { ChevronLeft, ChevronRight, Close } from '@edx/paragon/icons';
 import PropTypes from 'prop-types';
 
+import messages from './messages';
 import XpertLogo from './XpertLogo';
 
 const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
@@ -14,6 +16,7 @@ const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
     translationsError: false,
     view: '',
   });
+  const intl = useIntl();
 
   const handleAppState = (updatedData) => {
     setAppState((previousState) => ({ ...previousState, ...updatedData }));
@@ -45,7 +48,9 @@ const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
           >
             <div className="d-flex flex-column justify-content-center">
               <XpertLogo />
-              Get free translations
+              <h4 className="h4 free-transltions-text mt-2.5">
+                <FormattedMessage {...messages.getFreeTranslations} />
+              </h4>
               <Image
                 src={googleTranslateImage}
                 className="flex-grow-0"
@@ -70,7 +75,7 @@ const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
               size="sm"
               iconAs={Icon}
               src={ChevronLeft}
-              alt="back button to main transcript settings view"
+              alt={intl.formatMessage(messages.backButtonAlt)}
               onClick={handleBackButton}
             />
             <ActionRow.Spacer />
@@ -82,12 +87,12 @@ const App = ({ setIsAiTranslations, closeTranscriptSettings }) => {
                 setIsAiTranslations(false);
               }}
               src={Close}
-              alt="close settings"
+              alt={intl.formatMessage(messages.closeButtonAlt)}
               data-testid="action-row-close-btn"
             />
           </ActionRow>
           <div className="d-flex flex-column" key="ai-translations-views">
-            Translations is not available
+            <FormattedMessage {...messages.translationsNotAvailable} />
           </div>
         </>
       )}

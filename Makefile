@@ -1,5 +1,5 @@
-export TRANSIFEX_RESOURCE = frontend-component-header-edx
-transifex_resource = frontend-component-header-edx
+export TRANSIFEX_RESOURCE = frontend-component-ai-translations
+transifex_resource = frontend-component-ai-translations
 transifex_langs = "ar,fr,es_419,zh_CN,pt,it,de,uk,ru,hi,fr_CA"
 
 transifex_utils = ./node_modules/.bin/transifex-utils.js
