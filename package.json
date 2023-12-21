@@ -33,7 +33,7 @@
   "homepage": "https://github.com/openedx/frontend-component-ai-translations#readme",
   "devDependencies": {
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-build": "12.9.17",
+    "@edx/frontend-build": "13.0.14",
     "@testing-library/dom": "9.3.3",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "10.4.9",
