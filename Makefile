@@ -51,9 +51,24 @@ push_translations:
 	# Pushing comments to Transifex...
 	./node_modules/@edx/reactifex/bash_scripts/put_comments_v3.sh
 
+ifeq ($(OPENEDX_ATLAS_PULL),)
 # Pulls translations from Transifex.
 pull_translations:
 	tx pull -t -f --mode reviewed --languages=$(transifex_langs)
+else
+# Pulls translations using atlas.
+pull_translations:
+	rm -rf src/i18n/messages
+	mkdir src/i18n/messages
+	cd src/i18n/messages \
+	   && atlas pull --filter=$(transifex_langs) \
+	            translations/paragon/src/i18n/messages:paragon \
+	            translations/frontend-component-footer/src/i18n/messages:frontend-component-footer \
+	            translations/frontend-component-header/src/i18n/messages:frontend-component-header \
+	            translations/frontend-template-application/src/i18n/messages:frontend-template-application
+
+	$(intl_imports) paragon frontend-component-header frontend-component-footer frontend-template-application
+endif
 
 # This target is used by Travis.
 validate-no-uncommitted-package-lock-changes:
