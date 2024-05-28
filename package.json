@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "make build",
+    "prepare": "make build",
     "i18n_extract": "fedx-scripts formatjs extract",
     "lint": "fedx-scripts eslint --ext .js --ext .jsx .",
     "snapshot": "fedx-scripts jest --updateSnapshot",
