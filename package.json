@@ -33,7 +33,7 @@
   "homepage": "https://github.com/openedx/frontend-component-ai-translations#readme",
   "devDependencies": {
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-platform": "7.0.1",
+    "@edx/frontend-platform": "^8.0.3",
     "@openedx/frontend-build": "^14.0.3",
     "@openedx/paragon": "^22.0.0",
     "@testing-library/dom": "9.3.3",
@@ -55,7 +55,7 @@
     "ts-jest": "^29.1.2"
   },
   "peerDependencies": {
-    "@edx/frontend-platform": "^7.0.1",
+    "@edx/frontend-platform": "^8.0.3",
     "@openedx/paragon": "^21.5.7 || ^22.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.9.0 || ^17.0.0",
