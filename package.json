@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "make build",
+    "prepare": "make build",
     "i18n_extract": "fedx-scripts formatjs extract",
     "lint": "fedx-scripts eslint --ext .js --ext .jsx .",
     "snapshot": "fedx-scripts jest --updateSnapshot",
@@ -33,8 +34,8 @@
   "homepage": "https://github.com/openedx/frontend-component-ai-translations#readme",
   "devDependencies": {
     "@edx/browserslist-config": "^1.1.1",
-    "@edx/frontend-platform": "7.0.1",
-    "@openedx/frontend-build": "13.0.27",
+    "@edx/frontend-platform": "^8.0.3",
+    "@openedx/frontend-build": "^14.0.3",
     "@openedx/paragon": "^22.0.0",
     "@testing-library/dom": "9.3.3",
     "@testing-library/jest-dom": "5.17.0",
@@ -47,14 +48,15 @@
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
-    "prop-types": "15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "prop-types": "^15.5.10",
+    "react": "^16.9.0 || ^17.0.0",
+    "react-dom": "^16.9.0 || ^17.0.0",
     "react-responsive": "8.2.0",
-    "react-router-dom": "6.16.0"
+    "react-router-dom": "6.16.0",
+    "ts-jest": "^29.1.2"
   },
   "peerDependencies": {
-    "@edx/frontend-platform": "^7.0.1",
+    "@edx/frontend-platform": "^7.0.0 || ^8.0.0",
     "@openedx/paragon": "^21.5.7 || ^22.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.9.0 || ^17.0.0",
